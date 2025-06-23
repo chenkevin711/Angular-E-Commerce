@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "src/index.html" }
+  ],
+  "builds": [
+    {
+      "src": "tutorial/angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/tutorial"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "src/index.html" }
+  ]
+}
