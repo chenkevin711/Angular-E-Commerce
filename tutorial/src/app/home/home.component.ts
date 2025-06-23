@@ -81,7 +81,7 @@ export class HomeComponent {
 
     fetchProducts (page: number, perPage: number) {
         this.productsService
-            .getProducts('http://localhost:3002/clothes', {
+            .getProducts('https://angular-e-commerce-ld9zbcnd2-chenkevin711s-projects.vercel.app/clothes', {
                 page,
                 perPage
             })
@@ -98,7 +98,7 @@ export class HomeComponent {
 
     editProduct (product: Product, id: number) {
         this.productsService
-            .editProduct(`http://localhost:3002/clothes/${id}`, product)
+            .editProduct(`https://angular-e-commerce-ld9zbcnd2-chenkevin711s-projects.vercel.app/clothes/${id}`, product)
             .subscribe({
                 next: () => {
                     console.log('Product edited')
@@ -113,7 +113,7 @@ export class HomeComponent {
 
     addProduct (product: Product) {
         this.productsService
-            .addProduct('http://localhost:3002/clothes', product)
+            .addProduct('https://angular-e-commerce-ld9zbcnd2-chenkevin711s-projects.vercel.app/clothes', product)
             .subscribe({
                 next: () => {
                     console.log('Product added')
@@ -128,7 +128,7 @@ export class HomeComponent {
 
     deleteProduct (id: number) {
         this.productsService
-            .deleteProduct(`http://localhost:3002/clothes/${id}`)
+            .deleteProduct(`https://angular-e-commerce-ld9zbcnd2-chenkevin711s-projects.vercel.app/clothes/${id}`)
             .subscribe({
                 next: () => {
                     console.log('Product deleted')
