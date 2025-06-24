@@ -6,12 +6,12 @@ const axios = require("axios")
 const app = express();
 const port = 3002;
 
-// Cors configuration - Allows requests from localhost:4200
 const corsOptions = {
-    origin: "https://angular-e-commerce-project-frontend.vercel.app",
-    optionsSuccessStatus: 204,
+    origin: true, // allows all origins dynamically
     methods: "GET, POST, PUT, DELETE",
-};
+    credentials: true
+}
+
 
 // Use cors middleware
 app.use(cors(corsOptions));
