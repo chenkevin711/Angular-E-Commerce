@@ -8,7 +8,7 @@ const port = 3002;
 
 // Cors configuration - Allows requests from localhost:4200
 const corsOptions = {
-    origin: "https://angular-e-commerce-kxuu-frontend-fv31ho68g.vercel.app/",
+    origin: "https://angular-e-commerce-project-frontend.vercel.app/",
     optionsSuccessStatus: 204,
     methods: "GET, POST, PUT, DELETE",
 };
