@@ -7,14 +7,13 @@ const app = express();
 const port = 3002;
 
 const corsOptions = {
-    origin: true, // allows all origins dynamically
-    methods: "GET, POST, PUT, DELETE",
-    credentials: true
+    origin: "https://angular-e-commerce-project-frontend.vercel.app", // no slash
+    credentials: true,
+    methods: "GET,POST,PUT,DELETE"
 }
 
-
-// Use cors middleware
-app.use(cors(corsOptions));
+app.use(cors(corsOptions))
+app.options("*", cors(corsOptions)) // <- this handles preflight
 
 // Use express.json() middleware to parse JSON bodies of requests
 app.use(express.json());
